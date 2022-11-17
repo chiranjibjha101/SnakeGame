@@ -27,6 +27,7 @@ public class GamePanel1 extends JPanel implements KeyListener, ActionListener {
     int lengthofSnake=3;
     boolean gameover=false;
     int delay=150;
+    //coordinates for enemy to spawn
     int[] xposEnemy={25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
     int[] yposEnemy={75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625};
     int enemyX=150,enemyY=200;
@@ -39,7 +40,7 @@ public class GamePanel1 extends JPanel implements KeyListener, ActionListener {
         time=new Timer(delay,this);
         time.start();
     }
-    // logic for any type of interaction
+    // logic for any type of interaction with enemy and body of the snake
     public  void newEnemy(){
         enemyX=xposEnemy[random.nextInt(34)];
         enemyY=yposEnemy[random.nextInt(23)];
